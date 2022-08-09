@@ -1,0 +1,84 @@
+<!-- jQuery & Javascript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<%- include("header"); -%>
+
+<!-- About me -->
+<section class="green" id="about">
+    <div class="container-fluid push">
+        <div class="row">
+            <h1 class="med25 green-text">Nice to meet you!</h1>
+            <br><br>
+            <div class="col-md-6">
+                <p>
+                    I am a sophomore at Vanderbilt University studying Computer Science, Math, and Engineering Management (phew!). Although Nashville, Tennessee is where I currently reside, I was born and raised in sunny Southern California where I have been blessed by the wonders of In-n-Out Burger and The Rose Bowl Flea Market. 
+                    <br><br>
+                    Computer Science was a field that I had initially explored through my high school’s computer science class. Though coding a few for-loops in Java was nothing to write home about, the logic and overall approach to solving a new problem set sparked a love for computer science and opened the floodgates to the entire tech world. I found myself exploring fields that allowed me to couple my newfound love for computer science along with my existing passion for implementing ideas that would bring joy to the people around me. Thus, my interest in product and design was born. 
+                    <br><br>
+                    I have since worked to sharpen my technical, product, and interpersonal skills both inside and out of the classroom. Most recently, I have been refining my product-thinking skills through a product management fellowship at Product Space and adding some new coding languages under my belt through a full-stack web development bootcamp. I also work as a Sponsorship Committee Member at Vanderbilt’s hackathon VandyHacks, coordinating with external companies to fund an event for thousands of hackers from across the country. 
+                    <br><br>
+                    When I’m not debugging code or redesigning my Notion pages, you might catch me making oddly-specific Spotify playlists, providing commentary on the latest horror movie, or digging through the racks at my local thrift store. Feel free to shoot me a message about anything, even if it is just to chat!
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img class="profile" src="images/me.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="green" id="interests">
+    <div class="container-fluid push">
+        <h1 class="med25 green-text">What I've Been...</h1>
+        <br><br>
+        <ul id="tabs">
+            <li><a href="#" name="tab1">Reading</a></li>
+            <li><a href="#" name="tab2">Listening To</a></li>
+        </ul>
+
+        <div id="content">
+            <div id="tab1">
+                <img class="book" src="images/jlc.jpeg" alt="">
+                <img class="book" src="images/four.jpeg" alt="">
+                <img class="book" src="images/atomic.jpeg" alt="">
+                <img class="book" src="images/love.jpeg" alt="">
+            </div>
+            <div id="tab2">
+                <img class="music" src="images/phoebe.webp" alt="">
+                <img class="music" src="images/briston.jpeg" alt="">
+                <img class="music" src="images/npr.jpeg" alt="">
+                <img class="music" src="images/mitski.jpg" alt="">
+                <img class="music" src="images/tenpercent.jpeg" alt="">
+            </div>
+    
+        </div>  
+    </div>
+</section>
+
+
+
+
+<script>
+$(document).ready(function() {
+    $("#content").find("[id^='tab']").hide(); // Hide all content
+    $("#tabs li:first").attr("id","current"); // Activate the first tab
+    $("#content #tab1").fadeIn(); // Show first tab's content
+
+    $('#tabs a').click(function(e) {
+        e.preventDefault();
+        if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
+         return;
+        }
+        else{
+          $("#content").find("[id^='tab']").hide(); // Hide all content
+          $("#tabs li").attr("id",""); //Reset id's
+          $(this).parent().attr("id","current"); // Activate this
+          $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+});
+</script>
+
+
+<%- include("footer"); -%>

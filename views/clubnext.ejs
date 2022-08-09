@@ -1,0 +1,120 @@
+<%- include("header"); -%>
+
+<!-- INTRO AND OVERVIEW-->
+<section class="green" id="title">
+    <div class="container-fluid">
+        <h1>the Club NEXT App</h1>
+        <img class="club-next-image" src="images/cnhub.png">
+        <img class="club-next-image" src="images/cncalendar.png">
+        <img class="club-next-image" src="images/cnnotif.png">
+    </div>
+
+</section>
+
+<section class="white" id="overview">
+    <div class="container-fluid">
+        <h2>overview</h2>
+        <p>role: PM, Product Designer, Developer</p>
+        <p>team:  Just me! Working for the Club NEXT initiative of the Boys and Girls Club</p>
+        <p>timeline: June - August 2022</p>
+        <p>project description:  During my Summer 2022 Internship with the Boys and Girls Club, I had the opportunity to design and launch an app from start to finish for their digital initiative, Club NEXT. This app was not part of my original internship plan, but it became a project I took on wholeheartedly after seeing a pain point within the organization. This app is meant to be an easy-to-use hub for all of Club NEXT’s resources and events, so that every student and family member can more easily access all that Club NEXT has to offer. <br> This was my first time acting as my own PM, designer, and developer. I was guided by the primary question, inspired by the legendary Julie Zhuo, of “What will make this app useful and loved by the people of Club NEXT”? It was definitely a simpler design, as it was my first time taking on a project of this sort, but it was an incredibly educational and rewarding process. </p>
+
+        <h2>problem - Club NEXT engagement was not hitting its target metrics</h2>
+        <p>Because Club NEXT is virtual, all of the resources and programs are online. During the first month of summer programming, however, the engagement metrics that I was tracking as an initial part of my internship was below the ideal metric. </p>
+    </div>
+</section>
+
+<section class="green" id="research">
+    <div class="container-fluid">
+        <h2>user research</h2>
+        <p>After discussing with the internal team why the engagement rate was less than ideal, it was unanimously agreed that the Club NEXT digital infrastructure was outdated. Intrigued, I decided to conduct some user research to understand how the students felt about the issue.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/graph.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h3>According to my findings:</h3>
+                    <ul>
+                        <li>33% of users only check their Club NEXT resources if they have been explicitly instructed to by an in-person staff member. </li>
+                        <li>Another 33% don’t even check at all. </li>
+                        <li>Only 16% check on their own initiative to see if new resources have been uploaded. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>some conclusions</h2>
+        <p>The entirety of Club NEXT’s resources, from digital learning platforms to online tutoring, are spread throughout the internet on external sites. There is no centralized place to visit all of these resources, and there is no method for students to get notified when a resource gets updated- they simply have to check each resource’s separate website manually every day which can get tedious. Thus, engagement with the various Club NEXT resources was lower than the target metric. Similarly, attendance was lower for many virtual events, such as livestream panels. <br> Some features I concluded that would be helpful to mitigate these problems include: </p>
+        <div>An events calendar with direct links to virtual events </div>
+        <div>A hub for all resources that can be accessed from one place </div>
+        <div>A way to send notifications to students when learning resources got updated </div>
+        <h2>product requirements document</h2>
+        <p>Since I would be both designing and developing this app, I wanted to act as my own product manager, outlining key information about what I was doing and why. I wanted to not only remember for myself, but to also easily communicate with higher-ups within the Boys and Girls Club. Some factors I outlined include: user features, user requirements, and technical requirements.</p>
+
+    </div>
+</section>
+
+<section class="white" id="firstDes">
+    <div class="container-fluid">
+        <h2>the first designs</h2>
+        <p>This was my first time dabbling in Figma and UI, so I started by drafting up some rudimentary wireframes and mockups. I had my boss present this app to a few students in the Club (I was working remotely in California for the Boys and Girls Clubs of Middle Tennessee) in order to gain feedback. I was curious to know things such as:</p>
+        <img src="images/cnwireframe.png" alt="">
+        <img src="images/cnmockup.png" alt="">
+        <ul>
+            <li>What was not intuitive or easy to understand about the way the app works? </li>
+            <li>What did you like about the app? </li>
+            <li>What did you not like? </li>
+            <li>What features felt unnecessary?</li>
+            <li>What features did you feel were missing? </li>
+        </ul>
+        <p>From that initial round of testing, the feedback brought me to make a few changes to the app. Namely, there was a need to incorporate the Club NEXT virtual tutoring offering to the grid of resources. This was a newer program that Club NEXT had begun that students were not engaging with as much. Furthermore, features such as a dark-mode design and event popups were recommended. </p>
+    </div>
+</section>
+
+<section class="green" id="final">
+    <div class="container-fluid">
+        <h3>let’s review the features that meet our user goals: </h3>
+    <ul>
+        <li>A grid with easy access to all of Club NEXT’s resources, including live tutoring. </li>
+        <li>A calendar that automatically sorted through the events </li>
+        <li>Event popups </li>
+        <li>Notification page to host push notifications</li>
+    </ul>
+    <img class="club-next-image" src="images/cnhome.png">
+    <img class="club-next-image" src="images/cnhub.png">
+    <img class="club-next-image" src="images/cncalendar.png">
+    <img class="club-next-image" src="images/cnpopup.png">
+    <img class="club-next-image" src="images/cnnotif.png">
+    </div>
+</section>
+
+<section class="white" id="tech">
+    <div class="container-fluid">
+        <h2>backend requirements</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <p>The final element was tying together the backend database with the frontend. I used Firebase, a noSQL database that operates via collections of documents. In order to keep the team up to date with the basic CRUD operations, I also drafted a 7 page spreadsheet with how the app functions for when my internship ends. </p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/firebase.png" alt="">
+            </div>
+        </div>
+
+        <h2>user beta testing</h2>
+        <p>Once I had integrated the front and back end, I deployed the app to the App store for some beta versions to be easily distributed to Club NEXT members via TestFlight. 
+            <br>
+            The app had over ? users testing its functionality, in order to make sure both the front and back end worked as expected. After rounds of testing, I had users provide feedback on their initial thoughts on the app. 
+        </p>
+        <img src="" alt="">
+        <p>From there, it was a matter of fixing bugs and redeploying the app. It now lives on the App store to be downloaded by Club NEXT Members</p>
+    </div>
+</section>
+
+<section class="green" id="conclusions">
+    <div class="container-fluid">
+        <h2>final thoughts 🪄 </h2>
+        <p>This internship project was by far one of the most educational ones to date. I have never worked in Figma or with communicating a technical project to this degree. As I aspire to become a product manager, I learned a great deal about both the UI and development side of creating a product. Ultimately, I hope this experience will help me in cross-team communication and pushing grander initiatives to fruition. </p>
+    </div>
+</section>
+<%- include("footer"); -%>

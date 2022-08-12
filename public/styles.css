@@ -1,17 +1,39 @@
 /* Broad styles */
-
 body{
     font-family: 'Poppins', sans-serif;
     
+}
+h1, h2{
+  font-weight: 500;
+  color: #406e5d;
+  margin-bottom: 2rem;
 }
 .container-fluid{
     padding: 4rem 6rem;
 }
 .push{
-    padding: 2rem 10rem;
+    padding: 3rem 10rem;
 }
-
-
+.button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color:#406e5d;
+}
+a:hover {
+  text-decoration: underline;
+  color:#406e5d;
+}
+a{
+  text-decoration: none;
+}
+.workchunk{
+    margin: 4rem 0;
+}
+.workheading{
+    text-align: center; background-color: #BACDA0; border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+  }
 
 .green{
     background-color: #dee7d2;
@@ -25,25 +47,27 @@ body{
     color: #406e5d;
 }
 
+.black-text{
+    color: black;
+}
+
 .med25{
     font-weight: 500;
     font-size: 1.56rem;
 }
 
 
-
-
-
 /* Navbar */
 
 .nav-item{
     padding-left: 3rem;
+    text-align: right;
 }
 
 .navbar{
     padding-top: 2rem;
     position: relative;
-    bottom: 3rem;
+    /* bottom: 2rem; */
 }
 
 
@@ -59,13 +83,7 @@ body{
 
 .title-desc{
     padding-top: 5rem;
-    width: 45rem;
-}
-
-
-a:link{
-    text-decoration: none;
-    color: black;
+    width: 80%;
 }
 
 
@@ -87,9 +105,12 @@ a:link{
 
 .work-desc{
     margin: 2rem 0;
-    width: 25rem;
+    width: 80%;
 }
 
+.work-row{
+  margin-bottom: 6rem;
+}
 
 
 .pink{
@@ -103,11 +124,6 @@ a:link{
 .orange{
     background-color: #f9d7bc;
 }
-
-.work-row{
-    margin-bottom: 6rem;
-}
-
 .club-next-image{
     width: 13rem;
     height: 25rem;
@@ -141,6 +157,7 @@ a:link{
 
 #footer{
     text-align: center;
+    font-size: 80%;
 }
 
 .footer{
@@ -150,10 +167,10 @@ a:link{
 
 /*About*/
 .profile{
-    height: 40rem; 
-    width: 28rem;
-    margin-left: 7rem;
+    width: 400px;
     border-radius: 3rem;
+    margin: 4rem;
+
 }
 
 
@@ -204,7 +221,6 @@ a:link{
     bottom: 0;
     width: 1em;
     background: #C5D1B2;
-    /* background-image: linear-gradient(to bottom, #99B173, #C5D1B2); */
     box-shadow: 2px 2px 2px rgba(0,0,0,.4);
     transform: skew(10deg);
     border-radius: 0 5px 0 0;
@@ -228,15 +244,137 @@ a:link{
   }
 
   .book{
-    width: 6rem;
-    height: 9rem;
-    margin: 0 5rem;
+    width: 10%;
+    margin: 0 5%;
     filter: drop-shadow(4px 4px 4px #D3D3D3);
   }
 
   .music{
-    width: 9rem;
-    height: 9rem;
-    margin: 0 2rem;
+    width: 15%;
+    margin: 0 2%;
     filter: drop-shadow(4px 4px 4px #D3D3D3);
+  }
+
+
+  /* club next */
+  .iphone{
+    width: 80%; 
+    margin: 1rem 2rem;
+  } 
+
+  .graph-image{
+    width: 80%;
+    border-radius: 15px;
+  }
+
+  .sidebox{
+    background-color: 
+    #BACDA0; border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .wideimage{
+    width: 70%;
+    border-radius: 15px;
+    margin: 2rem 0;
+    clear: both;
+  }
+
+  .firebase{
+    width: 30%;
+  }
+
+  @media (max-width: 1127px){
+    /*homepage*/
+    .work-image{
+      width: 25rem;
+      height: 20rem;
+    } 
+    .club-next-image{
+      width: 10rem;
+      height: 17rem;
+      margin: auto;
+      position: relative; 
+      top: 2rem;
+      
+    }
+    .computer-image{
+      width: 20rem;
+      height: 12rem;
+    }    
+
+    /*about*/
+    .abouttext{
+      font-size: 80%;
+    }
+
+    .firebase{
+      width: 50%;
+    }
+  }
+
+
+  @media (max-width: 991px){
+    .skill{
+      font-size: x-small;
+    }
+
+    .work-image{
+      width: 18rem;
+      height: 15rem;
+      margin-right: 100%;
+      margin-top: 10%;
+    } 
+    .club-next-image{
+      width: 7rem;
+      height: 12rem;      
+    }
+    .computer-image{
+      width: 15rem;
+      height: 9rem;
+      top: 3rem;
+    }   
+
+  }
+
+  @media (max-width: 885px) {
+    .iphone{
+      margin: 1rem;
+    } 
+    
+  }
+
+  @media (max-width: 819px){
+    .footlink{
+      visibility: hidden;
+    }
+
+    .push{
+      padding: 3rem 6rem;
+    }
+
+    .profile{
+      width: 80%;
+      margin: 2rem;
+    }
+
+    .music{
+      margin: 2%;
+    }
+  
+    
+  }
+
+  @media (max-width: 591px){
+    .book{
+      width: 20%;
+      margin: 2%;
+      filter: drop-shadow(4px 4px 4px #D3D3D3);
+    }
+
+    .music{
+      width: 20%;
+    }
+  
   }
